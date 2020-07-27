@@ -18,7 +18,6 @@ public class UserControllerClientTest {
         WebClient webClient=WebClient.create("http://localhost:8080");
 
         User user=new User();
-
         user.setId(4L);
         user.setNote("test2");
         user.setUserName("lilith");
