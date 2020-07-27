@@ -19,9 +19,9 @@ public class UserControllerClientTest {
 
         User user=new User();
 
-        user.setId(1L);
-        user.setNote("test");
-        user.setUserName("michael");
+        user.setId(4L);
+        user.setNote("test2");
+        user.setUserName("lilith");
         user.setSexEnum(SexEnum.FEMALE);
 
         insertUser(webClient,user);
