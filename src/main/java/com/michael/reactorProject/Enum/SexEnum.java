@@ -35,7 +35,10 @@ public enum SexEnum {
     }
 
     public static SexEnum getSexEnum(int code){
+
         SexEnum  sexEnum=Arrays.stream(SexEnum.values()).filter(nums -> nums.getCode()==code).findFirst().orElse(null);
         return sexEnum;
     }
+
+
 }

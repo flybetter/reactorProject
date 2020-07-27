@@ -6,7 +6,8 @@ import reactor.core.publisher.Flux;
 
 public interface UserRepository  extends ReactiveMongoRepository<User,Long> {
 
-    public Flux<User> findByUserNameLikeAndNoteLikeAnd(String userName, String note);
+    public Flux<User> findByUserNameLikeAndNoteLike(String userName, String note);
+
 
 
 }

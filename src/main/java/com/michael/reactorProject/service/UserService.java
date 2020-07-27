@@ -13,7 +13,7 @@ public interface UserService {
 
     Mono<User> updateUser(User user);
 
-    Mono<Void> deleteUser(User user);
+    Mono<Void> deleteUser(Long id);
 
     Flux<User> findUsers(String userName,String note);
 

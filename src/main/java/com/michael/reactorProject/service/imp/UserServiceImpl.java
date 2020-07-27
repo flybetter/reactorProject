@@ -16,26 +16,27 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Mono<User> getUser(Long id) {
-        return userRepository.findBy;
+        return userRepository.findById(id);
     }
 
     @Override
     public Mono<User> insertUser(User user) {
-        return null;
+
+        return userRepository.save(user);
     }
 
     @Override
     public Mono<User> updateUser(User user) {
-        return null;
+        return userRepository.save(user);
     }
 
     @Override
-    public Mono<Void> deleteUser(User user) {
-        return null;
+    public Mono<Void> deleteUser(Long id) {
+        return userRepository.deleteById(id);
     }
 
     @Override
     public Flux<User> findUsers(String userName, String note) {
-        return null;
+        return userRepository.findByUserNameLikeAndNoteLike(userName,note);
     }
 }
